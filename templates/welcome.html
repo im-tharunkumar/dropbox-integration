@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Instruction:</h1>
+    <p>1) A folder named "Apps->docuedge" will be created for our application.</p>
+    <p>2) If a folder already exists with this path, we will use that folder to track files.</p>
+    <p>3) We will download all existing files and subfolders in this path.</p>
+    <p>4) If you don't want to share existing files, kindly move them to another folder before allowing our app.</p>
+    <p>5) Once you allow our app, we will track all files uploaded in this folder and its sub-folders.</p>
+
+    <button id="authorizeBtn">Allow DocuEdge for Dropbox access </button>
+    <a id="Oauth" href="https://www.dropbox.com/oauth2/authorize?client_id={{app_key}}&redirect_uri={{redirect_uri}}&response_type=code&token_access_type=offline" hidden>click here to allow Dropbox</a>
+
+    <script>
+        document.getElementById('authorizeBtn').addEventListener('click', function() {
+            // Trigger the click event on the anchor element with id "Oauth"
+            document.getElementById('Oauth').click();
+        });
+    </script>
+</body>
+</html>
